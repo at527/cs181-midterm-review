@@ -349,20 +349,43 @@ with respect to y.
 the edges, whereas the laplacian filter (second derivative of gaussian) only provides the location
 of the edges.
 
-True: 
+True: Derivative gives you the slope
+which gives the maxima/minima. 
+Derivative of derivative characterizes
+rate of change in the slope.
 
 20\. When detecting edges with a derivative of gaussian (DoG) filter, how does changing the
 parameter σ affect the types of edges that will be detected?
 
+$\sigma$ is the degree of freedom.
+Large detects "larger-scale"
+edges/details and smaller
+detects finer details/edges.
+
 21\. True or False: Gaussian filters act as a high-pass filter
 
+False: it blocks noise (high-frequency) leaving 
+low-frequencies, so it is a
+low-pass filter.
+
 22\. True or False: Image derivative estimates are invariant to scale of smoothing filters.
+
+False: scale affects the derivative estimates
 
 ## Lecture 9
 
 23\. Name at least three properties that make for a good feature (interest point).
 
+* Uniqueness ("meaningful, low false-positives, high detection rate)
+
+* ease of detection and computation,
+
+* robustness (not affected by
+noise, illuminations, angle, etc)
+
 24\. Give three examples of a high-level (semantic) feature.
+
+head, shoulders, knees, and toes
 
 25\. You are working on Harris corner detection and encounter the following local structure
 matrix H1:
@@ -376,6 +399,8 @@ $$
 
 26\. Using eigen-analysis (i.e., by calculating the eigenvalues of the matrix), identify the type of
 feature (i.e., flat region, corner, edge) that this matrix represents.
+
+
 
 27\. What does the H matrix of a horizontal edge look like?
 

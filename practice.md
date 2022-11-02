@@ -400,15 +400,54 @@ $$
 26\. Using eigen-analysis (i.e., by calculating the eigenvalues of the matrix), identify the type of
 feature (i.e., flat region, corner, edge) that this matrix represents.
 
+$$
+\begin{align*}
+    \text{det} 
+    \begin{bmatrix}
+        8 - \lambda & 4 \\
+        4 & 2 - \lambda
+    \end{bmatrix} &= 0 \\
+    (16 - 2 \lambda -8\lambda + \lambda^2)  - 16&= 0 \\
+    (\lambda^2 - 10\lambda) &= 0 \\
+    \lambda(\lambda - 10) &= 0 \\
+    \lambda_1 &= 0 \\
+    \lambda_2 &= 10 
+\end{align*}
+$$
 
+Edge since only one direction is changing.
 
 27\. What does the H matrix of a horizontal edge look like?
+
+$$
+H = 
+\begin{bmatrix}
+    0 & 0 \\
+    0 & C
+\end{bmatrix}
+$$
+
+$C$ gives the change in $y$.
 
 ## Lecture 10
 
 28\. True or False. Corner locations detected by Harris corner detection are equivariant w.r.t.
 rotation of the image
 
+True: theyre still related, just rotated.
+
 29\. What is the difference between feature detection and feature extraction?
 
+Feature detection finds interesting points/areas that can be used
+in feature extraction. Feature extraction characterizes (represent/describe)
+points so they can be compared.
+This reduces the dimensionality of the data.
+
 30\. What is the difference between SIFT and SURF?
+
+SIFT stands for Scale Invariant Feature Transform.
+It uses edge gradients to find all edges.
+
+SURF stands for Speeded Up Robust Features.
+It uses the sift idea, but approximates using box filters
+and integral images.

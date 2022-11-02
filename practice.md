@@ -244,7 +244,9 @@ $$
         7 & 8 & 9
     \end{bmatrix}
 $$
+
 and a point 
+
 $$
     x = \begin{bmatrix}
         2 \\
